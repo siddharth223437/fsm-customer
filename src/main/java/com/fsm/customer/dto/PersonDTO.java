@@ -3,43 +3,28 @@ package com.fsm.customer.dto;
 import java.io.Serializable;
 
 public class PersonDTO implements Serializable {
-    private String firstName;
-    private String lastName;
-    private String email;
+
+    private IndividualDTO individualDTO;
     private AddressDTO addressDTO;
-    private CompanyDTO companyDTO;
+    private OrganizationDTO organizationDTO;
 
-    public CompanyDTO getCompanyDTO() {
-        return companyDTO;
+    public IndividualDTO getIndividualDTO() {
+        return individualDTO;
     }
 
-    public void setCompanyDTO(CompanyDTO companyDTO) {
-        this.companyDTO = companyDTO;
+    public void setIndividualDTO(IndividualDTO individualDTO) {
+        this.individualDTO = individualDTO;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public OrganizationDTO getOrganizationDTO() {
+        return organizationDTO;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setOrganizationDTO(OrganizationDTO organizationDTO) {
+        this.organizationDTO = organizationDTO;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public AddressDTO getAddressDTO() {
         return addressDTO;
@@ -47,6 +32,36 @@ public class PersonDTO implements Serializable {
 
     public void setAddressDTO(AddressDTO addressDTO) {
         this.addressDTO = addressDTO;
+    }
+
+    public static class IndividualDTO {
+        private String firstName;
+        private String lastName;
+        private String email;
+
+        public String getFirstName() {
+            return firstName;
+        }
+
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        public String getLastName() {
+            return lastName;
+        }
+
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
     }
 
     public static class AddressDTO implements Serializable {
@@ -115,15 +130,33 @@ public class PersonDTO implements Serializable {
         }
     }
 
-    public static class CompanyDTO implements Serializable {
-        private String companyName;
+    public static class OrganizationDTO implements Serializable {
+        private String organizationName;
+        private String organizationContactPerson;
+        private String organizationEmail;
 
-        public String getCompanyName() {
-            return companyName;
+        public String getOrganizationName() {
+            return organizationName;
         }
 
-        public void setCompanyName(String companyName) {
-            this.companyName = companyName;
+        public void setOrganizationName(String organizationName) {
+            this.organizationName = organizationName;
+        }
+
+        public String getOrganizationContactPerson() {
+            return organizationContactPerson;
+        }
+
+        public void setOrganizationContactPerson(String organizationContactPerson) {
+            this.organizationContactPerson = organizationContactPerson;
+        }
+
+        public String getOrganizationEmail() {
+            return organizationEmail;
+        }
+
+        public void setOrganizationEmail(String organizationEmail) {
+            this.organizationEmail = organizationEmail;
         }
     }
 }

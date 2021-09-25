@@ -1,7 +1,6 @@
 package com.fsm.customer.model;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 @DiscriminatorValue("ORG")
@@ -10,6 +9,17 @@ public class Organization extends Person {
     private String orgName;
     private String orgContactPerson;
     private String orgEmail;
+
+    @OneToOne(mappedBy = "organization",cascade = CascadeType.ALL)
+    private Employee employee;
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
 
     public String getOrgName() {
         return orgName;

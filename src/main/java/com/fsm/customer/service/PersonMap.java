@@ -14,7 +14,10 @@ public class PersonMap extends PropertyMap {
         setupProperty("address.state","state");
         setupProperty("address.zipcode","zipcode");
         setupProperty("address.phoneNumber","phone number");
-        setupProperty("company.name","Company Name");
+
+        setupProperty("org.name","Organization Name");
+        setupProperty("org.contactPerson","Organization Contact Name");
+        setupProperty("org.email","email");
 //        setupProperty("company.name","Company Name");
     }
 }

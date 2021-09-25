@@ -27,15 +27,15 @@ public class Address extends Persistent {
     private Person person;
 
     @ManyToOne
-    @JoinColumn(name = "COMPANY_ID")
-    private Company company;
+    @JoinColumn(name = "EMPLOYEE_ID")
+    private Employee employee;
 
-    public Company getCompany() {
-        return company;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setCompany(Company company) {
-        this.company = company;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public Person getPerson() {
